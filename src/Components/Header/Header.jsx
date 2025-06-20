@@ -3,10 +3,10 @@ import { NavLink } from "react-router";
 import Logo from "../../shared/Logo";
 
 const Header = () => {
-    const links = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About Us</NavLink></li>
-    </>
+    const links = <dic className="flex items-center gap-6 flex-col md:flex-row">
+        <NavLink className={`text-lg font-medium`} to="/">Home</NavLink>
+        <NavLink className={`text-lg font-medium`} to="/about">About Us</NavLink>
+    </dic>
   return (
     <div className="py-4">
       <div className="navbar bg-white rounded-full py-2 px-4 md:px-6">
@@ -39,7 +39,7 @@ const Header = () => {
         <Logo/>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal  px-1">
           {links}
         </ul>
       </div>
